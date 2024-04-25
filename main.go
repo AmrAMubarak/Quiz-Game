@@ -54,8 +54,7 @@ func StartQuiz(questions [][]string) {
 		var asnwer string
 
 		if _, err := fmt.Scan(&asnwer); err != nil {
-			fmt.Printf("failed to  scan: %v", err)
-			return
+			exit(fmt.Sprintf("failed to  scan: %v", err))
 		}
 		if asnwer == correctAnswer {
 			correctAnswers++
